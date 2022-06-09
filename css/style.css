@@ -415,7 +415,7 @@ h3.my-profession{
 .skill-item .skill-percent{
     position: absolute;
     right: 0;
-    columns: var(--text-black-900);    
+    color: var(--text-black-900); 
     top: -40px;
     font-weight: 400;
     line-height: 40px;
@@ -737,13 +737,14 @@ h3.my-profession{
     }
 }
 @media (max-width:600px){
+    .skills .skills-item,
     .contact .contact-form .col-5{
         flex: 0 0 100%;
         max-width: 100%;
     }
 }
 @media (max-width:400px){
-    .skills .skills-item,
+    
     .contact .contact-info-item{
         flex: 0 0 100%;
         max-width: 100%;
@@ -764,11 +765,11 @@ h3.my-profession{
         font-size: 37px;
     }
     h3.my-profession{
-        font-size: 22px;
-        margin: 12px 0;
+        font-size: 20px;
+        margin: 10px 0;
     }
     .btn{
-        padding: 10px 20px;
+        padding: 10px 15px;
     }
 }
 @media (max-width:320px){
