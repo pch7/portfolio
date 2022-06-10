@@ -83,7 +83,7 @@
 /* Animations */
 .fa-gear,
 .fas,
-.active .fa,
+.nav .active .fa,
 .social-item:nth-child(1){
     animation: rotating 7s infinite;
 }
