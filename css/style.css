@@ -231,7 +231,7 @@ ul{
     left: 0;
     background: var(--skin-color);
 }
-.aside .nav-toggler.open span::before{
+.aside .nav-toggler.open span::after{
     transform: rotate(45deg);
     top: 0;
 }
@@ -244,7 +244,7 @@ ul{
     left: 0;
     background: var(--skin-color);
 }
-.aside .nav-toggler.open span::after{
+.aside .nav-toggler.open span::before{
     transform: rotate(-45deg);
     top: 0;
 }
@@ -794,6 +794,9 @@ h3.my-profession{
         display: block;
         margin-left: 0;
     }
+    .section .container{
+        padding-top: 70px;
+    }
 }
 
 @media (max-width:1040px) {
@@ -816,9 +819,38 @@ h3.my-profession{
         max-width: 100%;
     }
     .home .home-img{
-        /* flex: 0 0 80%; */
-        /* max-width: 80%; */
-        display: none;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 100px;
+        position: relative;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .home-img::after{
+        content: '';
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        border-bottom: 10px solid var(--skin-color);
+        border-right: 10px solid var(--skin-color);
+        right: 20px;
+        bottom: -40px;
+    }
+    .home-img::before{
+        content: '';
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        border-top: 10px solid var(--skin-color);
+        border-left: 10px solid var(--skin-color);
+        left: 10px;
+        top: -40px;
+    }
+    .home .home-img img{
+        height: 400px;
+        transition: all 1s ease;
+        border-radius: 10px;
     }
 
 }
@@ -841,6 +873,36 @@ h3.my-profession{
     .contact .contact-form .col-5{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    #footer{
+        height: 80px;
+    }
+}
+@media (max-width:450px){
+    .home-img::after{
+        content: '';
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        border-bottom: 5px solid var(--skin-color);
+        border-right: 5px solid var(--skin-color);
+        right: 10px;
+        bottom: -20px;
+    }
+    .home-img::before{
+        content: '';
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        border-top: 5px solid var(--skin-color);
+        border-left: 5px solid var(--skin-color);
+        left: 5px;
+        top: -20px;
+    }
+    .home .home-img img{
+        height: 350px;
+        transition: all 1s ease;
+        border-radius: 10px;
     }
 }
 @media (max-width:400px){
@@ -892,6 +954,15 @@ h3.my-profession{
         font-size: 19px;
         margin: 12px 0;
     }
+    .home-img::before{
+        left: -15px;
+    top: -20px;
+    }
+    .home-img::after{
+        right: -10px;
+        bottom: -16px;
+    }
+
 }
 
 
