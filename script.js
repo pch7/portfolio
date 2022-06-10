@@ -27,6 +27,10 @@ const nav = document.querySelector(".nav"),
         }
         this.classList.add("active");
         showSection(this);
+        if(window.innerWidth < 1200)
+        {
+            asideSectionTogglerBtn();
+        }
         })
     }
 function showSection(element)
@@ -46,6 +50,12 @@ asideSectionTogglerBtn();
 function asideSectionTogglerBtn() 
 {
     aside.classList.toggle("open");
+    navTogglerBtn.classList.toggle("open");
+    for(let i=0; i<totalSection; i++)
+    {
+        allSection[i].classList.toggle("open");
+    }
+
 } 
 
 
