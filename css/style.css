@@ -13,7 +13,22 @@ body.light{
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
 }
+/* Scroll Bar */
+html{
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width:0.5rem;
+}
 
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--text-black-700);
+}
 body{
     margin: 0;
     padding: 0;
@@ -766,7 +781,41 @@ h3.my-profession{
 }
 /* End Footer */
 
+/* Service Not available */
 
+.not-available{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.not-available:hover{
+    transform: scale(1.2);
+}
+.no-service{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: var(--bg-black-50);
+    color: var(--text-black-900);
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px -10px var(--text-black-700);
+    z-index: 10;
+    transition: all 0.5s ease;
+    text-align: right;
+}
+.no-service.active{
+    display: inline-block;
+}
+.no-service p{
+    margin-bottom: 10px;
+}
+.no-service-btn{
+    cursor: pointer;
+}
+
+/* Service not available End */
 
 /* Responsive */
 
@@ -852,6 +901,10 @@ h3.my-profession{
         transition: all 1s ease;
         border-radius: 10px;
     }
+    .no-service{
+        top: 35%;
+        left: 35%;
+    }
 
 }
 
@@ -867,6 +920,10 @@ h3.my-profession{
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .no-service{
+        top: 30%;
+        left: 30%;
+    }
 }
 @media (max-width:600px){
     .skills .skills-item,
@@ -876,6 +933,10 @@ h3.my-profession{
     }
     #footer{
         height: 80px;
+    }
+    .no-service{
+        top: 25%;
+        left: 25%;
     }
 }
 @media (max-width:450px){
@@ -903,6 +964,10 @@ h3.my-profession{
         height: 350px;
         transition: all 1s ease;
         border-radius: 10px;
+    }
+    .no-service{
+        top: 20%;
+        left: 20%;
     }
 }
 @media (max-width:400px){
@@ -933,6 +998,10 @@ h3.my-profession{
     .btn{
         padding: 10px 15px;
     }
+    .no-service{
+        top: 15%;
+        left: 15%;
+    }
 }
 @media (max-width:320px){
     h3.hello{
@@ -961,6 +1030,10 @@ h3.my-profession{
     .home-img::after{
         right: -10px;
         bottom: -16px;
+    }
+    .no-service{
+        top: 10%;
+        left: 10%;
     }
 
 }

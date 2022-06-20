@@ -1,6 +1,6 @@
 // Typing Animation
 var typed = new Typed(".typing",{
-    strings:["","Web Developer", "Python Programmer"],
+    strings:["","Web Developer", "Python Programmer", "Engineering Student"],
     typeSpeed:100,
     BackSpeed:60,
     loop:true
@@ -84,6 +84,23 @@ function asideSectionTogglerBtn()
 } 
 
 
+document.querySelector('.no-service-btn').onclick =() => {
+    console.log("Unselected");
+    noServiceEnable.classList.remove('active');
+}
+window.addEventListener("scroll", function() {
+    if(document.querySelector(".no-service").classList.contains("active"))
+    {
+        document.querySelector(".no-service").classList.remove("active")
+    }
+})       
+noServiceEnable = document.querySelector('.no-service');
+btns = document.getElementsByClassName("not-available");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            noServiceEnable.classList.toggle('active');
+    });
+}
 
 
 
