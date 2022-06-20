@@ -999,8 +999,8 @@ h3.my-profession{
         padding: 10px 15px;
     }
     .no-service{
-        top: 15%;
-        left: 15%;
+        top: 10%;
+        left: 5%;
     }
 }
 @media (max-width:320px){
@@ -1033,7 +1033,7 @@ h3.my-profession{
     }
     .no-service{
         top: 10%;
-        left: 10%;
+        left: 0%;
     }
 
 }
